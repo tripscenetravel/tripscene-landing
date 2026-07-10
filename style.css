@@ -421,6 +421,140 @@ body {
     height: 100%;
 }
 
+/* --- Premium Google Reviews Layout --- */
+.reviews-section {
+    background-color: var(--bg-dark);
+    padding: 5rem 0;
+}
+
+.rating-summary-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.g-logo-wrapper img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.rating-details {
+    flex-grow: 1;
+}
+
+.rating-details h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.stars-row {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.star-icon {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+.rating-score {
+    font-weight: 600;
+    margin-left: 0.6rem;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.reviews-count {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.btn-review {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    white-space: nowrap;
+}
+
+.btn-review:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-1px);
+}
+
+.reviews-grid-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.review-display-card {
+    background: linear-gradient(145deg, #121212, #181818);
+    border-radius: 8px;
+    padding: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.reviewer-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--gold);
+    color: #000000;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.reviewer-meta h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.review-date {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    display: block;
+}
+
+.card-stars {
+    color: #FFD700;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+.review-display-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
 /* --- WhatsApp Catalog Section --- */
 .catalog-section {
     background-color: var(--bg-surface);
@@ -565,6 +699,9 @@ body {
     .btn { width: 100%; }
     .section-title { font-size: 2rem; }
     .footer-content { flex-direction: column; gap: 2rem; }
+    .rating-summary-card { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+    .stars-row { justify-content: center; }
+    .btn-review { width: 100%; }
 }
 
 @media (max-width: 480px) {
