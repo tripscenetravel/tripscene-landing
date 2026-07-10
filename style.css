@@ -399,3 +399,70 @@
         gap: 1.5rem;
     }
 }
+/* --- WhatsApp Catalog Section --- */
+.catalog-section {
+    background-color: var(--bg-surface);
+    padding: 4rem 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.catalog-card {
+    background: linear-gradient(145deg, #161616, #0a0a0a);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.catalog-icon-glow {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem auto;
+    background: rgba(37, 211, 102, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.catalog-icon-glow img {
+    width: 35px;
+    height: 35px;
+    filter: invert(59%) sepia(85%) saturate(415%) hue-rotate(85deg) brightness(93%) contrast(92%);
+}
+
+.catalog-card h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.catalog-card p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-catalog {
+    background-color: #25D366;
+    color: #ffffff;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-catalog:hover {
+    background-color: #20ba59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
