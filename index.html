@@ -3,117 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TripScene Travels</title>
+<title>TripScene Travels | Kya Scene Hai? TripScene Hai.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#111;
-color:#fff;
-text-align:center;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+position:fixed;
+width:100%;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#d4af37;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
 }
 
 .hero{
-padding:60px 20px;
-background:linear-gradient(135deg,#000,#6b4b2a);
+height:100vh;
+background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
-.hero img{
-width:170px;
-border-radius:50%;
+.overlay{
+background:rgba(0,0,0,.55);
+padding:40px;
+border-radius:20px;
+max-width:700px;
+}
+
+.hero h1{
+font-size:56px;
 margin-bottom:20px;
 }
 
-h1{
-font-size:42px;
-margin:10px 0;
-}
-
-p{
-font-size:18px;
-color:#ddd;
+.hero p{
+font-size:20px;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-margin:12px;
 padding:15px 30px;
-background:#c68a3b;
-color:#fff;
-text-decoration:none;
-border-radius:30px;
+background:#d4af37;
+color:black;
 font-weight:bold;
+text-decoration:none;
+border-radius:50px;
+margin:10px;
 }
 
-.section{
-padding:60px 20px;
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#d4af37;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-background:#1d1d1d;
+background:#1b1b1b;
 padding:25px;
-margin:20px auto;
-max-width:700px;
-border-radius:15px;
+border-radius:20px;
+text-align:center;
 }
 
 footer{
 padding:40px;
-color:#999;
+text-align:center;
+background:#000;
+margin-top:60px;
 }
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:18px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+}
+
 </style>
 </head>
 
 <body>
 
+<nav>
+
+<div class="logo">TripScene</div>
+
+<div>
+
+<a href="#">Home</a>
+
+<a href="#">Trips</a>
+
+<a href="#">Gallery</a>
+
+<a href="#">Contact</a>
+
+</div>
+
+</nav>
+
 <section class="hero">
 
-<img src="https://i.imgur.com/8Km9tLL.png">
+<div class="overlay">
 
-<h1>TripScene Travels</h1>
+<h1>Travel Beyond Ordinary</h1>
 
-<p>Kya Scene Hai? TripScene Hai! 🏔️</p>
+<p>Kya Scene Hai? TripScene Hai.</p>
 
 <a class="btn" href="https://wa.me/918920728011">Book Now</a>
 
-<a class="btn" href="https://instagram.com/tripscenetravels">Instagram</a>
+<a class="btn" href="#destinations">Explore Trips</a>
+
+</div>
 
 </section>
 
-<section class="section">
+<section id="destinations">
 
-<div class="card">
-<h2>About Us</h2>
+<h2 class="title">Popular Destinations</h2>
 
-<p>
-Delhi based travel community creating unforgettable trips across Himachal, Uttarakhand, Rajasthan and beyond.
-</p>
+<div class="cards">
 
-</div>
+<div class="card">🏔️ Manali</div>
 
-<div class="card">
-<h2>Why Choose Us?</h2>
+<div class="card">🌲 Jibhi</div>
 
-<p>
-✔ Daily Departures<br>
-✔ Budget Friendly Trips<br>
-✔ Experienced Trip Captains<br>
-✔ 11,900+ Instagram Family
-</p>
+<div class="card">❄️ Kedarkantha</div>
+
+<div class="card">🏕️ Kasol</div>
+
+<div class="card">🌄 Chopta</div>
+
+<div class="card">🏔️ Hampta Pass</div>
 
 </div>
 
+</section>
+
+<section>
+
+<h2 class="title">Why Choose TripScene?</h2>
+
+<div class="cards">
+
+<div class="card">2500+ Happy Travellers</div>
+
+<div class="card">Budget Friendly Packages</div>
+
+<div class="card">Verified Hotels</div>
+
+<div class="card">24×7 Support</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Contact Us</h2>
+
 <div class="card">
-<h2>Contact</h2>
 
-<p>
-
-📞 +91 8920728011<br><br>
+📞 +91 89207 28011<br><br>
 
 📧 tripscenetravel@gmail.com
-
-</p>
 
 </div>
 
@@ -124,6 +224,8 @@ Delhi based travel community creating unforgettable trips across Himachal, Uttar
 © 2026 TripScene Travels
 
 </footer>
+
+<a class="whatsapp" href="https://wa.me/918920728011">💬</a>
 
 </body>
 </html>
