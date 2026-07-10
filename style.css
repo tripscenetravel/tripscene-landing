@@ -16,14 +16,8 @@
     box-sizing: border-box;
 }
 
-html, body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    font-family: var(--font-body);
-    scroll-behavior: smooth;
-    width: 100%;
-    overflow-x: hidden; /* Prevents unwanted shaking left or right */
-    overflow-y: auto;   /* Forces the page to allow natural vertical scrolling */
+<img src="https://i.ibb.co/HLVBLhbY/IMG-0917.png" alt="TripScene Travels Logo" class="brand-logo">
+
 }
 
 /* --- Premium Navbar --- */
