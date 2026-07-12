@@ -85,15 +85,13 @@
         }
 
         /* Upcoming Departures Component */
-                     <!-- Trip 1 -->
-                <div class="departure-card">
-                    <span class="date-badge">18 Dec</span>
-                    <h3>Hampta Pass Crossover Trek</h3>
-                    <p class="departure-meta">⏳ 5 Days / 4 Nights | Ex-Manali to Spiti</p>
-                    <div class="price-tag"><span style="font-size: 0.9rem; color: #888; font-weight: 400;">Starting from </span>₹8,499/-</div>
-                    <a href="https://wa.me/918920728011?text=I%20want%20to%20book%20the%20Hampta%20Pass%20Trek%20for%2018%20Dec" target="_blank" class="btn-dep-book">Book Now</a>
-                </div>
-
+        .departures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
         }
         .departure-card {
             background: #111;
@@ -301,7 +299,7 @@
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.9 त्यौ;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -341,7 +339,7 @@
         </div>
     </nav>
 
-    <!-- Item 1: Unforgettable Emotional Hero Section Layout -->
+    <!-- Emotional Hero Section Layout -->
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -366,7 +364,7 @@
         </div>
     </header>
 
-    <!-- Item 3: Company Statistics Component -->
+    <!-- Company Statistics Component -->
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-card">
@@ -388,21 +386,23 @@
         </div>
     </section>
 
-    <!-- Item 5: Upcoming Departures Section -->
+    <!-- Upcoming Departures Section -->
     <section id="departures" class="departures-section">
         <div class="section-container">
             <h2 class="section-title" style="text-align: center;">Upcoming <span class="gold-text">Departures</span></h2>
             <p class="section-subtitle" style="text-align: center;">Secure your slot for our upcoming seasonal batches. Fixed dates, elite setups.</p>
             
             <div class="departures-grid">
+                <!-- Trip 1: Hampta Pass Crossover -->
                 <div class="departure-card">
                     <span class="date-badge">18 Dec</span>
-                    <h3>Kedarkantha Summit Trek</h3>
-                    <p class="departure-meta">⏳ 5 Days / 4 Nights | Ex-Dehradun</p>
-                    <div class="price-tag"><span style="font-size: 0.9rem; color: #888; font-weight: 400;">Starting from </span>₹6,999/-</div>
-                    <a href="https://wa.me/918920728011?text=I%20want%20to%20book%20the%20Kedarkantha%20Trek%20for%2018%20Dec" target="_blank" class="btn-dep-book">Book Now</a>
+                    <h3>Hampta Pass Crossover Trek</h3>
+                    <p class="departure-meta">⏳ 5 Days / 4 Nights | Ex-Manali to Spiti</p>
+                    <div class="price-tag"><span style="font-size: 0.9rem; color: #888; font-weight: 400;">Starting from </span>₹8,499/-</div>
+                    <a href="https://wa.me/918920728011?text=I%20want%20to%20book%20the%20Hampta%20Pass%20Trek%20for%2018%20Dec" target="_blank" class="btn-dep-book">Book Now</a>
                 </div>
 
+                <!-- Trip 2: Manali & Jibhi -->
                 <div class="departure-card">
                     <span class="date-badge">23 Dec</span>
                     <h3>Manali & Jibhi Valley</h3>
@@ -411,6 +411,7 @@
                     <a href="https://wa.me/918920728011?text=I%20want%20to%20book%20the%20Manali%20Jibhi%20Trip%20for%2023%20Dec" target="_blank" class="btn-dep-book">Book Now</a>
                 </div>
 
+                <!-- Trip 3: Spiti Winter Circuit -->
                 <div class="departure-card">
                     <span class="date-badge">30 Dec</span>
                     <h3>Spiti Valley Winter Circuit</h3>
@@ -504,7 +505,7 @@
         </div>
     </section>
 
-    <!-- Item 2: Truncated Narrative Story Box -->
+    <!-- Narrative Story Box -->
     <section class="story-blog-section" style="padding: 60px 0; background-color: #070707; border-top: 1px solid #1a1a1a;">
         <div class="section-container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
             <h2 class="section-title" style="text-align: center; margin-bottom: 10px;">The TripScene <span class="gold-text">Experience</span></h2>
@@ -521,7 +522,7 @@
         </div>
     </section>
 
-    <!-- Item 8: Native Premium Inquiry Lead Form -->
+    <!-- Inquiry Lead Form -->
     <section class="inquiry-section" style="border-top: 1px solid #1a1a1a;">
         <div class="section-container">
             <h2 class="section-title" style="text-align: center;">Plan Your <span class="gold-text">Custom Journey</span></h2>
@@ -613,7 +614,7 @@
         </div>
     </section>
 
-    <!-- Item 6: Strategic Pre-WhatsApp FAQ Repository Section -->
+    <!-- Pre-WhatsApp FAQ Repository Section -->
     <section class="faq-section">
         <div class="section-container">
             <h2 class="section-title" style="text-align: center;">Frequently Asked <span class="gold-text">Questions</span></h2>
@@ -636,7 +637,7 @@
         </div>
     </section>
 
-    <!-- Real Social Proof & Reviews Showcase -->
+    <!-- Reviews Showcase -->
     <section class="reviews-section" style="background: #070707; padding: 60px 0;">
         <div class="section-container">
             <h2 class="section-title">What Our <span class="gold-text">Travelers Say</span></h2>
@@ -689,7 +690,7 @@
         </div>
     </section>
 
-    <!-- Item 10: Expanded High-Authority Corporate Footer -->
+    <!-- Expanded Corporate Footer -->
     <footer class="main-footer" style="background: #0b0b0b; padding: 60px 0 20px 0; border-top: 1px solid #1a1a1a;">
         <div class="footer-grid-extended">
             <div class="footer-col">
@@ -708,7 +709,7 @@
                 <h4>Popular Packages</h4>
                 <ul>
                     <li><a href="https://wa.me/918920728011?text=Manali" target="_blank">Manali & Jibhi Valley</a></li>
-                    <li><a href="https://wa.me/918920728011?text=Kedarkantha" target="_blank">Kedarkantha Alpine Trek</a></li>
+                    <li><a href="https://wa.me/918920728011?text=Hampta" target="_blank">Hampta Pass Crossover</a></li>
                     <li><a href="https://wa.me/918920728011?text=Spiti" target="_blank">Spiti Valley Winter Circuit</a></li>
                 </ul>
             </div>
