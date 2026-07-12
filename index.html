@@ -8,10 +8,229 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Premium UI Architecture Stylesheet Injection -->
+    <style>
+        body {
+            background-color: #070707;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            padding-bottom: 70px; /* Space for Sticky Mobile Bar */
+        }
+        .gold-text {
+            color: #d4af37;
+            font-weight: 700;
+        }
+        
+        /* Hero Section Upgrades */
+        .hero-pillars {
+            margin: 20px 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #b5b5b5;
+            letter-spacing: 1px;
+        }
+        .hero-trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.07);
+            padding: 6px 16px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Stats Component */
+        .stats-section {
+            padding: 50px 0;
+            background: #0b0b0b;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-card h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: #d4af37;
+            margin-bottom: 5px;
+        }
+        .stat-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Upcoming Departures Component */
+        .departures-section {
+            padding: 80px 0 40px 0;
+        }
+        .departures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+        .departure-card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 25px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .departure-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+        }
+        .date-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #d4af37;
+            color: #000;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        .departure-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .departure-meta {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #aaa;
+        }
+        .price-tag {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .btn-dep-book {
+            display: block;
+            text-align: center;
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-dep-book:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        /* Sticky Mobile Conversion Bar */
+        .sticky-action-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(7, 7, 7, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #222;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            z-index: 9999;
+            display: none;
+        }
+        .sticky-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sticky-text h4 {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .sticky-text p {
+            margin: 2px 0 0 0;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        .btn-sticky-wa {
+            background: #25d366;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Global Layout Image Standards */
+        .card-img-wrapper img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .destination-card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+        .story-content-box {
+            background: linear-gradient(145deg, #121212, #181818);
+            border: 1px solid #252525;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .hero-trust-badges {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            .sticky-action-bar {
+                display: block;
+            }
+            .story-content-box {
+                padding: 25px !important;
+                font-size: 1rem !important;
+            }
+            .card-img-wrapper img {
+                height: 220px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Premium Navbar with Official Logo -->
+    <!-- Premium Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo-wrapper">
@@ -22,26 +241,96 @@
         </div>
     </nav>
 
-    <!-- Cinematic Hero -->
+    <!-- Priority 1: Unforgettable Creative Director Hero Layout -->
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-sub">PREMIUM ADVENTURE & LUXURY TRAVEL</p>
-            <h1>Explore Beyond <br><span class="gold-text">The Ordinary</span></h1>
+            <p class="hero-sub">TRIPSCENE TRAVELS</p>
+            <h1>Explore Beyond Maps. <br><span class="gold-text">Create Memories Beyond Expectations.</span></h1>
             <p class="hero-tagline">“Kya Scene Hai? TripScene Hai.”</p>
+            
+            <div class="hero-pillars">
+                Weekend Getaways • Treks • Group Tours • Customized Holidays • International Trips
+            </div>
+
             <div class="hero-btns">
-                <a href="#destinations" class="btn btn-primary">View Expeditions</a>
+                <a href="#departures" class="btn btn-primary">🟡 Explore Trips</a>
                 <a href="https://wa.me/918920728011" class="btn btn-secondary" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="wa-icon"> Chat on WhatsApp
+                    ⚫ Book on WhatsApp
                 </a>
+            </div>
+
+            <div class="hero-trust-badges">
+                <div class="badge-item">⭐ 2500+ Happy Travellers</div>
+                <div class="badge-item">🚌 Weekly Departures</div>
+                <div class="badge-item">🛡️ Trusted Travel Community</div>
             </div>
         </div>
     </header>
 
+    <!-- Priority 3: Strategic Trust Statistics Component -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2>2500+</h2>
+                <p>Happy Travellers</p>
+            </div>
+            <div class="stat-card">
+                <h2>150+</h2>
+                <p>Trips Conducted</p>
+            </div>
+            <div class="stat-card">
+                <h2>40+</h2>
+                <p>Destinations</p>
+            </div>
+            <div class="stat-card">
+                <h2>4.9★</h2>
+                <p>Average Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Priority 5: Upcoming Departures Section -->
+    <section id="departures" class="departures-section" style="background-color: #070707;">
+        <div class="section-container">
+            <h2 class="section-title" style="text-align: center;">Upcoming <span class="gold-text">Departures</span></h2>
+            <p class="section-subtitle" style="text-align: center;">Secure your slot for our upcoming seasonal batches. Fixed dates, elite setups.</p>
+            
+            <div class="departures-grid">
+                <!-- Trip 1 -->
+                <div class="departure-card">
+                    <span class="date-badge">18 Dec</span>
+                    <h3>Kedarkantha Summit Trek</h3>
+                    <p class="departure-meta">⏳ 5 Days / 4 Nights | Ex-Dehradun</p>
+                    <div class="price-tag"><span style="font-size: 0.9rem; color: #888; font-weight: 400;">Starting from </span>₹6,999/-</div>
+                    <a href="https://wa.me/918920728011?text=I%20want%20to%20book%20the%20Kedarkantha%20Trek%20for%2018%20Dec" target="_blank" class="btn-dep-book">Book Now</a>
+                </div>
+
+                <!-- Trip 2 -->
+                <div class="departure-card">
+                    <span class="date-badge">23 Dec</span>
+                    <h3>Manali & Jibhi Valley</h3>
+                    <p class="departure-meta">⏳ 4 Days / 3 Nights | Ex-Delhi Weekend</p>
+                    <div class="price-tag"><span style="font-size: 0.9rem; color: #888; font-weight: 400;">Starting from </span>₹7,499/-</div>
+                    <a href="https://wa.me/918920728011?text=I%20want%20to%20book%20the%20Manali%20Jibhi%20Trip%20for%2023%20Dec" target="_blank" class="btn-dep-book">Book Now</a>
+                </div>
+
+                <!-- Trip 3 -->
+                <div class="departure-card">
+                    <span class="date-badge">30 Dec</span>
+                    <h3>Spiti Valley Winter Circuit</h3>
+                    <p class="departure-meta">⏳ 8 Days / 7 Nights | Pure White Spiti</p>
+                    <div class="price-tag"><span style="font-size: 0.9rem; color: #888; font-weight: 400;">Starting from </span>₹21,999/-</div>
+                    <a href="https://wa.me/918920728011?text=I%20want%20to%20book%20the%20Winter%20Spiti%20Trip%20for%2030%20Dec" target="_blank" class="btn-dep-book">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Premium Destinations Grid -->
     <section id="destinations" class="destinations-section">
         <div class="section-container">
-            <h2 class="section-title">Our Featured <span class="gold-text">Expeditions</span></h2>
+            <h2 class="section-title">Explore Featured <span class="gold-text">Expeditions</span></h2>
             <p class="section-subtitle">Handcrafted premium itineraries designed for core travelers.</p>
             
             <div class="destinations-grid">
@@ -122,13 +411,13 @@
         </div>
     </section>
 
-    <!-- Deep Storytelling & Community Knowledge Hub -->
+    <!-- Deep Storytelling Journal Section -->
     <section class="story-blog-section" style="padding: 60px 0; background-color: #0b0b0b; border-top: 1px solid #1a1a1a;">
         <div class="section-container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
             <h2 class="section-title" style="text-align: center; margin-bottom: 10px;">The TripScene <span class="gold-text">Experience</span></h2>
             <p class="section-subtitle" style="text-align: center; margin-bottom: 40px; color: #888;">What it really means to hit the road with our travel community.</p>
             
-            <div class="story-content-box" style="background: #121212; border: 1px solid #222; padding: 40px; border-radius: 12px; line-height: 1.8; color: #cccccc; font-size: 1.1rem; shadow: 0 4px 20px rgba(0,0,0,0.5);">
+            <div class="story-content-box" style="padding: 40px; border-radius: 12px; line-height: 1.8; color: #cccccc; font-size: 1.1rem;">
                 <p style="margin-bottom: 20px;">
                     Travel isn’t just about ticking boxes on a map or taking standard tourist photos; it’s about breaking away from the relentless rush of ordinary routines to discover raw, unfiltered perspectives. At **TripScene Travels**, we build handcrafted, premium itineraries designed specifically for core travelers who crave authentic adventure and rich cultural immersion. Whether we are navigating the dramatic high-altitude curves of the Spiti Valley circuit, traversing pristine snow walls at the Kedarkantha summit, or sharing stories over local traditional meals in the hidden hamlets of Jibhi Valley, our focus remains firmly on the vibe of community, safety, and ultimate comfort.
                 </p>
@@ -145,14 +434,14 @@
         </div>
     </section>
 
-    <!-- Premium Travel Blogs Section -->
+    <!-- Travel Insights Section -->
     <section id="blogs" class="blogs-section">
         <div class="section-container">
             <h2 class="section-title">Travel <span class="gold-text">Insights</span></h2>
             <p class="section-subtitle">Expert guides, packing tips, and hidden stories from the road.</p>
             
             <div class="blogs-grid">
-                                <!-- Blog 1: Hampta Pass -->
+                <!-- Blog 1: Hampta Pass -->
                 <div class="blog-card">
                     <div class="blog-img">
                         <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80" alt="Hampta Pass Trekking">
@@ -160,11 +449,12 @@
                     <div class="blog-body">
                         <span class="blog-date">July 2026</span>
                         <h3>Hampta Pass: The Ultimate 4,270m Crossover</h3>
-                        <p>Most Himalayan treks show you one landscape, but Hampta Pass offers a dramatic dramatic gear shift. Starting from the dense green pine forests and lush meadows of Manali, you trek up to a staggering altitude of 14,100 feet (4,270 meters) before crossing over into the stark, raw, barren cold desert landscape of the Spiti Valley circuit. It's an intense 5-day high-altitude adventure best conquered between mid-June and October, complete with thrilling glacial river crossings and a final campsite stop at the majestic, crescent-shaped Chandratal Lake.</p>
+                        <p>Most Himalayan treks show you one landscape, but Hampta Pass offers a dramatic gear shift. Starting from the dense green pine forests and lush meadows of Manali, you trek up to a staggering altitude of 14,100 feet (4,270 meters) before crossing over into the stark, raw, barren cold desert landscape of the Spiti Valley circuit. It's an intense 5-day high-altitude adventure best conquered between mid-June and October, complete with thrilling glacial river crossings and a final campsite stop at the majestic, crescent-shaped Chandratal Lake.</p>
                         <a href="https://wa.me/918920728011?text=I%20want%20to%20know%20more%20about%20the%20Hampta%20Pass%20Trek" target="_blank" class="blog-link">Enquire Package →</a>
                     </div>
-                </
-                               <!-- Blog 2: Udaipur -->
+                </div>
+
+                <!-- Blog 2: Udaipur -->
                 <div class="blog-card">
                     <div class="blog-img">
                         <img src="https://i.ibb.co/1tpvhxhh/IMG-0261.jpg" alt="Udaipur Luxury Lake View Experience">
@@ -176,8 +466,6 @@
                         <a href="https://wa.me/918920728011?text=I%20want%20to%20know%20more%20about%20the%20Udaipur%20Royal%20Escape" target="_blank" class="blog-link">Enquire Package →</a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -189,15 +477,12 @@
             <p class="section-subtitle">Quick, raw, cinematic moments captured live from our latest trips.</p>
             
             <div class="shorts-grid">
-                <!-- Short 1: Jaisalmer Expedition -->
                 <div class="short-container">
                     <iframe src="https://www.youtube.com/embed/Wj9G4olcfSU" title="TripScene Jaisalmer Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- Short 2: Mountain Adventure & Snow Trails -->
                 <div class="short-container">
                     <iframe src="https://www.youtube.com/embed/87xa-Sbv68s" title="TripScene Mountain Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- Short 3: Kedarkantha Summit Trek -->
                 <div class="short-container">
                     <iframe src="https://www.youtube.com/embed/nB8mvp0L7d8" title="TripScene Kedarkantha Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -205,7 +490,7 @@
         </div>
     </section>
 
-    <!-- Premium Google Reviews Showcase Section -->
+    <!-- Priority 2: Real Social Proof & Google Reviews Showcase -->
     <section class="reviews-section">
         <div class="section-container">
             <h2 class="section-title">What Our <span class="gold-text">Travelers Say</span></h2>
@@ -233,7 +518,6 @@
                 </a>
             </div>
 
-            <!-- Featured Review Highlights -->
             <div class="reviews-grid-display">
                 <!-- Review 1 -->
                 <div class="review-display-card">
@@ -241,7 +525,7 @@
                         <div class="reviewer-avatar">A</div>
                         <div>
                             <h4>Amit Sharma</h4>
-                            <span class="review-date">Verified Traveler</span>
+                            <span class="review-date">Verified Traveler • Kedarkantha</span>
                         </div>
                     </div>
                     <div class="card-stars">★★★★★</div>
@@ -254,7 +538,7 @@
                         <div class="reviewer-avatar">R</div>
                         <div>
                             <h4>Riya Verma</h4>
-                            <span class="review-date">Verified Traveler</span>
+                            <span class="review-date">Verified Traveler • Jibhi Valley</span>
                         </div>
                     </div>
                     <div class="card-stars">★★★★★</div>
@@ -297,6 +581,19 @@
             <p>&copy; 2026 TripScene Travels. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Priority 4: Sticky Conversion Bar for Mobile Screens -->
+    <div class="sticky-action-bar">
+        <div class="sticky-container">
+            <div class="sticky-text">
+                <h4>TripScene Travels</h4>
+                <p>“Kya Scene Hai? TripScene Hai.”</p>
+            </div>
+            <a href="https://wa.me/918920728011?text=Hey%20TripScene!%20I%20am%20checking%20out%20your%20website%20and%20want%20to%20plan%20a%20trip." class="btn-sticky-wa" target="_blank">
+                <span style="font-size:1.1rem;">🟢</span> Chat Now
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
